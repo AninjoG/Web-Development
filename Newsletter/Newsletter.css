@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=PT+Serif&display=swap');
+
+html { background-color: #f2eecb }
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: #404040;
+  padding: 0 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+h2 {
+  font: 2.5rem/.95 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+time {
+  font: 700 1.5rem 'Times New Roman', Times, serif;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 3px solid #333333;
+  border-bottom: 3px solid #333333;
+  padding: 12px 0;
+  display: block;
+}
+
+time sup {
+  font-size: .875rem;
+  font-weight: normal;
+}
+
+img { filter: grayscale(100%) }
+figure {
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+figcaption {
+  font-family: Times New Roman;
+}
+
+@media (min-width: 955px) {
+  article {
+    column-count: 4;
+    column-rule: 2px solid #333333;
+    column-gap: 42px;
+    margin-top: 36px;
+  }
+
+blockquote { column-span: all }
+figure { break-inside: avoid }
+p {
+    text-align: justify;
+    hyphens: auto;
+  }
+figure {
+  float: left;
+  margin-right: 24px;
+  }
+}
