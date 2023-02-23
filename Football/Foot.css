@@ -1,0 +1,73 @@
+body {
+   background:url("Back.jpg") ;
+   background-size: cover; 
+   background-repeat: no-repeat;
+}
+
+#pic1 {
+    border:2px black solid;
+    background:black;  
+    margin-top: 110px; 
+    margin-left: 620px;
+    border-radius:100px;
+    transition: border-radius 6s;
+    position: absolute;
+    animation-name: myfirst;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+
+}
+
+#ply1 {
+    margin-top: 230px;
+    margin-left: 1030px;
+    animation: flip 4.5s infinite;
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(200px) scaleX(1);
+    }
+    100% {
+        transform: perspective(200px) scaleX(-1);
+    }
+}
+
+
+#ply2 {
+    margin-top: -190px;
+    margin-right: 890px;
+    animation: flip 4.5s infinite ;
+}
+
+@-webkit-keyframes myfirst {
+    0%   {left:-370px; top:190px; transform: rotate(0deg);}
+    50%   {left:450px; top: 190px; transform: rotate(360deg);}
+    100%   {left:-370px; top:190px; transform: rotate(0deg);}  
+}
+
+div#panel {
+    position: absolute;
+    width: 496px;
+    top: 30px;
+    left: 370px;
+    display: flex;
+}
+
+div#panel button {
+    width: 45%;
+    height: 30px;
+    margin: 5px auto;
+    border: none;
+}
+
+div#panel button#btn-start {
+    background-color: #03dac6;
+}
+
+div#panel button#btn-stop {
+    background-color: #b00020;
+    color: #fff;
+}
+
