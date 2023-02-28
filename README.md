@@ -10,3 +10,5 @@ Assignment 4 - Goa Website
 <br>
 Assignment 5 - Football 
 <br>
+Assignment 6 - Labelled Images
+<br>
