@@ -12,3 +12,5 @@ Assignment 5 - Football
 <br>
 Assignment 6 - Labelled Images
 <br>
+Assignment 7 - Forms
+<br>
