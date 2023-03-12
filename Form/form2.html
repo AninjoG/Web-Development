@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form</title>
+	<style>
+		container.one{
+			display: block;
+			margin: 0px;
+			width: 300px;
+			height: 58px;
+			padding: 10px;
+			border: 1px solid black;
+			text-align: start;
+		}
+
+		container.two{
+			display: block;
+			margin: 0px;
+			width: 300px;
+			height: 85px;
+			padding: 10px;
+			border: 1px solid black;
+			text-align: start;
+		}
+
+		.row {
+			display: flex;
+			flex-direction: row;
+			border: 1px solid black;
+			padding: 5px;
+		}
+
+		.col {
+			flex: 1;
+		}
+
+		.col:first-child {
+			flex: 0.5;
+		}
+
+		form {
+			margin-top: 10px;
+			width: 360px;
+			height: 400px;
+			background-color: gainsboro;
+			border-radius: 2px;
+			border: 3px solid black;
+			padding: 15px;
+		}
+		div#table-container{
+			margin-left: auto; 
+			margin-right: 10px;
+			margin-top: -435px;
+			width:600px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label for="rollno">Roll No:</label>
+		<input type="text" name="rollno" id="rollno" required><br><br>
+
+        <label for="rollno">Name:</label>
+        <input type="text" name="name" id="name" required><br><br>
+        
+		<label for="gender">Gender:</label>
+		<container class="one">
+        <input type="radio" name="gender" id="male" value="male" required>
+		<label for="male">Male</label><br>
+		<input type="radio" name="gender" id="female" value="female" required>
+		<label for="female">Female</label><br>
+		<input type="radio" name="gender" id="other" value="other" required>
+		<label for="female">Other</label><br><br>
+     	</container><br>
+
+		<label for="semester">Semester:</label>
+		<select name="semester" id="semester">
+            <option value="">Select a semester</option>
+            <option value="I">I</option>  
+            <option value="II">II</option>  
+            <option value="III">III</option>  
+            <option value="IV">IV</option>  
+            <option value="V">V</option>  
+            <option value="VI">VI</option>  
+            <option value="VII">VII</option> 
+            <option value="VIII">VIII</option>  
+            <option value="IX">IX</option>  
+            <option value="X">X</option> 
+		</select><br><br>
+
+		<label for="subjects">Electives:</label><br>
+		<container class="two">
+        <input type="checkbox" name="subjects" id="CC" value="Cloud Computing">
+		<label for="Cloud Computing">Cloud Computing</label><br>
+		<input type="checkbox" name="subjects" id="WD" value="Website Development">
+		<label for="Website Development">Website Development</label><br>
+		<input type="checkbox" name="subjects" id="AD" value="Application Development">
+		<label for="Application Development">Application Development</label><br>
+		<input type="checkbox" name="subjects" id="PP" value="Programming Paradigm"></label>
+        <label for="Programming Paradigm">Programming Paradigm</label><br><br><br>
+	    </container><br>
+		<button type="submit" align="center">Submit</button>
+	</form>
+
+	<div id="table-container">
+		<div class="row">
+			<div class="col"><strong>Roll No</strong></div>
+            <div class="col"><strong>Name</strong></div>
+			<div class="col"><strong>Gender</strong></div>
+			<div class="col"><strong>Semester</strong></div>
+			<div class="col"><strong>Electives</strong></div>
+		</div>
+		<div id="table-body"></div>
+	</div>
+
+	<script>
+		var form = document.querySelector("form");
+		var tableBody = document.querySelector("#table-body");
+
+		form.addEventListener("submit", function(e) {
+			e.preventDefault();
+
+			var rollNo = form.elements["rollno"].value;
+            var Name = form.elements["name"].value;
+			var gender = form.elements["gender"].value;
+			var semester = form.elements["semester"].value;
+			var subjects = form.elements["subjects"];
+			var selectedSubjects = [];
+			for (var i = 0; i < subjects.length; i++) {
+				if (subjects[i].checked) {
+					selectedSubjects.push(subjects[i].value);
+				}
+			}
+
+			var rows = document.querySelectorAll(".row");
+			for (var i = 1; i < rows.length; i++) {
+				if (rows[i].querySelector(".col:first-child").textContent === rollNo) {
+                    alert("Roll no already exists!");
+                    return;
+                    }
+                    }
+            
+		var newRow = document.createElement("div");
+		newRow.classList.add("row");
+
+		var rollNoCol = document.createElement("div");
+		rollNoCol.classList.add("col");
+		rollNoCol.textContent = rollNo;
+		newRow.appendChild(rollNoCol);
+
+        var name = document.createElement("div");
+		name.classList.add("col");
+		name.textContent = Name;
+		newRow.appendChild(name);
+
+		var genderCol = document.createElement("div");
+		genderCol.classList.add("col");
+		genderCol.textContent = gender;
+		newRow.appendChild(genderCol);
+
+		var semesterCol = document.createElement("div");
+		semesterCol.classList.add("col");
+		semesterCol.textContent = semester;
+		newRow.appendChild(semesterCol);
+
+		var subjectsCol = document.createElement("div");
+		subjectsCol.classList.add("col");
+		subjectsCol.textContent = selectedSubjects.join(", ");
+		newRow.appendChild(subjectsCol);
+
+		tableBody.appendChild(newRow);
+
+		form.reset();
+	});
+</script>
+</body>
+</html>
+
+
+
+
+            
+
