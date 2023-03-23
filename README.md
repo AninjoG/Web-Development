@@ -12,7 +12,9 @@ Assignment 5 - Football
 <br>
 Assignment 6 - Labelled Images
 <br>
-Assignment 7 - Forms
+Assignment 7.1 - Forms 1
+<br>
+Assignment 7.2 - Forms 2
 <br>
 Assignment 8 - Cards
 <br>
