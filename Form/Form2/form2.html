@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form</title>
+	<link rel="stylesheet" href="./form2.css">
+</head>
+<body>
+	<form>
+		<label for="rollno">Roll No:</label>
+		<input type="text" name="rollno" id="rollno" required><br><br>
+
+        <label for="rollno">Name:</label>
+        <input type="text" name="name" id="name" required><br><br>
+        
+		<label for="gender">Gender:</label>
+		<container class="one">
+        <input type="radio" name="gender" id="male" value="male" required>
+		<label for="male">Male</label><br>
+		<input type="radio" name="gender" id="female" value="female" required>
+		<label for="female">Female</label><br>
+		<input type="radio" name="gender" id="other" value="other" required>
+		<label for="female">Other</label><br><br>
+     	</container><br>
+
+		<label for="semester">Semester:</label>
+		<select name="semester" id="semester">
+            <option value="">Select a semester</option>
+            <option value="I">I</option>  
+            <option value="II">II</option>  
+            <option value="III">III</option>  
+            <option value="IV">IV</option>  
+            <option value="V">V</option>  
+            <option value="VI">VI</option>  
+            <option value="VII">VII</option> 
+            <option value="VIII">VIII</option>  
+            <option value="IX">IX</option>  
+            <option value="X">X</option> 
+		</select><br><br>
+
+		<label for="subjects">Electives:</label><br>
+		<container class="two">
+        <input type="checkbox" name="subjects" id="CC" value="Cloud Computing">
+		<label for="Cloud Computing">Cloud Computing</label><br>
+		<input type="checkbox" name="subjects" id="WD" value="Website Development">
+		<label for="Website Development">Website Development</label><br>
+		<input type="checkbox" name="subjects" id="AD" value="Application Development">
+		<label for="Application Development">Application Development</label><br>
+		<input type="checkbox" name="subjects" id="PP" value="Programming Paradigm"></label>
+        <label for="Programming Paradigm">Programming Paradigm</label><br><br><br>
+	    </container><br>
+		<button type="submit" align="center">Submit</button>
+	</form>
+
+	<div id="table-container">
+		<div class="row">
+			<div class="col"><strong>Roll No</strong></div>
+            <div class="col"><strong>Name</strong></div>
+			<div class="col"><strong>Gender</strong></div>
+			<div class="col"><strong>Semester</strong></div>
+			<div class="col"><strong>Electives</strong></div>
+		</div>
+		<div id="table-body"></div>
+	</div>
+    
+	<script src="form2.js"></script> 
+</body>
+</html>
+
+
+
+
+            
+
