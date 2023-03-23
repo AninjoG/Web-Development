@@ -1,0 +1,71 @@
+<!Doctype html>
+
+<html>   
+   <head>    
+     <link rel="stylesheet" href="./form1.css">
+     <title>   
+        Registration form 
+     </title>
+  </head>
+<body> 
+    <form>  
+         <label for="roll"> Roll No: </label>         
+         <input type="number" name="roll" size="25 " id="roll" /> <br> <br> 
+
+         <label for="name"> Name: </label>         
+         <input type="text" name="name" size="25" id="name"/> <br> <br>  
+
+         <label for="gender"> Gender : </label>
+         <container class="one" >
+            <input type="radio" name="gender" id="male" value="Male"/> 
+               <label for="male">Male</label> <br>  
+            <input type="radio" name="gender" id="female" value="Female"/> 
+               <label for="female">Female</label> <br>
+            <input type="radio" name="gender" id="other" value="Other"/>  
+               <label for="other">Other</label> <br> 
+         </container><br><br>
+
+         <label > Semester :  </label>   
+         <select id="sem">  
+         <option value="I" id="1">I</option>  
+         <option value="II" id="2">II</option>  
+         <option value="III" id="3">III</option>  
+         <option value="IV" id="4" >IV</option>  
+         <option value="V" id="5" >V</option>  
+         <option value="VI" id="6" >VI</option>  
+         <option value="VII" id="7" >VII</option> 
+         <option value="VIII" id="8" >VIII</option>  
+         <option value="IX" id="9" >IX</option>  
+         <option value="X" id="10" >X</option>  
+         </select>  <br> <br>  
+
+         <label for="electives"> Electives: </label>  
+         <container class="two" id="check">
+         <input type="checkbox" name="electives" id="CC" value="Cloud Computing">  
+         <label for="CC">Math</label><br>
+         <input type="checkbox" name="electives" id="WD" value="Website Development"> 
+         <label for="WD">Website Development</label><br>   
+         <input type="checkbox" name="electives" id="AD" value="Application Development">
+         <label for="AD">Application Development</label><br>
+         <input type="checkbox" name="electives" id="PP" value="Programming Paradigm">
+         <label for="PP">Programming Paradigm</label><br>
+         </container> <br> <br> 
+
+         <input value="Submit" onclick="AddRow()" type="button" name="button" id="btn">   
+      
+   </form> 
+         <table id="show" class="center">
+				<tr>
+					<th>Roll No</th>
+					<th>Name</th>
+					<th>Gender</th>
+               <th>Semester</th>
+               <th>Electives</th>
+				</tr>	
+		   </table>
+
+      
+      <script src="form1.js"></script> 
+</body>
+</html>   
+    
