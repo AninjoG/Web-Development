@@ -14,3 +14,5 @@ Assignment 6 - Labelled Images
 <br>
 Assignment 7 - Forms
 <br>
+Assignment 8 - Cards
+<br>
