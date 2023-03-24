@@ -18,3 +18,5 @@ Assignment 7.2 - Forms 2
 <br>
 Assignment 8 - Cards
 <br>
+Assignment 9 - Product Catalog
+<br>
